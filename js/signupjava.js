@@ -8,6 +8,15 @@ const password_input = document.getElementById('password')
 const confirm_password_input = document.getElementById('confirm-password')
 const error_message = document.getElementById('errormessages')
 const error_box = document.querySelector('.error-box')
+
+// Verify required DOM elements exist
+if (!form || !firstname_input || !lastname_input || !username_input || 
+    !phonenumber_input || !email_input || !password_input || 
+    !confirm_password_input || !error_box || !error_message) {
+    console.error('Required DOM elements not found');
+    throw new Error('Required DOM elements not found');
+}
+
 function getSignupErrors(firstname_input,lastname_input,username_input,phonenumber_input,email_input,password_input,confirm_password_input){
     let errors = []
     if(firstname_input === ''){
