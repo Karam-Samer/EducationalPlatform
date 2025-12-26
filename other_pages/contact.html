@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - أكاديمية التعلّم الإلكتروني</title>
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">A</div>
+                <span>أكاديمية التعلّم</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../courses-home.html">الكورسات</a></li>
+                <li><a href="about.html">عن المنصة</a></li>
+                <li><a href="contact.html" class="active">تواصل معنا</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="window.location.href='../auth/LOGIN.html'">تسجيل الدخول</button>
+                <button class="signup-btn" onclick="window.location.href='../auth/SIGNUP.html'">حساب جديد</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="section-title">تواصل معنا</h1>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>معلومات التواصل</h3>
+
+                    <div class="info-item">
+                        <div class="info-icon">📌</div>
+                        <div class="info-text">
+                            العنوان: ليس لنا موقع فعلي حاليا!
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            الهاتف: <a href="tel:+2011247997951">+201124797951</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-text">
+                            البريد الإلكتروني: <a href="mailto:Mazen@academy.edu">Mazen@academy.edu</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🕒</div>
+                        <div class="info-text">
+                            وقت استقبال المشكلات: من الأحد إلى الخميس، من 8 صباحًا إلى 4 مساءً
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>وسائل التواصل الاجتماعي</h3>
+
+                    <div class="info-item">
+                        <div class="info-icon"><img src="../photos/facebook.png"></div>
+                        <div class="info-text">
+                            <a href="#" target="_blank">فيسبوك</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><img src="../photos/twitter.png"></div>
+                        <div class="info-text">
+                            <a href="#" target="_blank">تويتر</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><img src="../photos/instagram.png"></div>
+                        <div class="info-text">
+                            <a href="#" target="_blank">إنستجرام</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><img src="../photos/linkedin.png"></div>
+                        <div class="info-text">
+                            <a href="#" target="_blank">لينكد إن</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="fo" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="fo" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">المشكلة</label>
+                        <input type="text" id="fo" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">الرسالة</label>
+                        <textarea id="message" class="form-control"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../other_pages/about.html" class="footer-link">عن المنصة</a>
+            <a href="../courses-home.html" class="footer-link">الكورسات</a>
+            <a href="../other_pages/contact.html" class="footer-link">تواصل معنا</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="../photos/facebook.png"></a>
+            <a href="#" class="social-icon"><img src="../photos/twitter.png"></a>
+            <a href="#" class="social-icon"><img src="../photos/youtube.png"></a>
+            <a href="#" class="social-icon"><img src="../photos/instagram.png"></a>
+        </div>
+
+        <p>أكاديمية التعلّم الإلكتروني.</p>
+    </footer>
+
+    <script>
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            let isValid = true;
+            const requiredInputs = document.querySelectorAll("#fo");
+
+            requiredInputs.forEach(input => {
+                if (input.value.trim() === "") {
+                    isValid = false;
+                    input.style.border = "1px solid red";
+                } else {
+                    input.style.border = "1px solid #ccc";
+                }
+            });
+
+            if (!isValid) {
+                alert("الرجاء ملء جميع الحقول المطلوبة!");
+                event.preventDefault();
+            }
+        });
+        if (isValid) {
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريبًا.');
+                this.reset();
+            });
+        }   
+    </script>
+</body>
+
+</html>

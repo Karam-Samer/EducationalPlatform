@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>SIGN UP page</title>
+  <link rel="stylesheet" href="../css/login&register.css">
+  <script type="text/javascript" src="../js/signupjava.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">A</div>
+        <span>أكاديمية التعلّم</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../courses-home.html">الكورسات</a></li>
+        <li><a href="../other_pages/about.html">عن المنصة</a></li>
+        <li><a href="../other_pages/contact.html">تواصل معنا</a></li>
+      </ul>
+
+      <div class="auth-buttons">
+        <button class="login-btn" onclick="window.location.href='LOGIN.html'">تسجيل الدخول</button>
+        <button class="signup-btn" onclick="window.location.href='SIGNUP.html'">حساب جديد</button>
+      </div>
+    </div>
+  </nav>
+  <div style="padding-top: 200px;">
+    <h1>انشئ حسابك الآن</h1>
+    <div class="error-box">
+      <p id="errormessages"></p>
+    </div>
+    <div class="log-in">
+      <form action="" method="post" id="my-form">
+        <div class="input-group">
+          <div class="form-row">
+            <div class="Inputs-with-Icons">
+              <input type="text" placeholder="الاسم الاول" name="First-name" id="first-name">
+              <div class="vertical-line"></div>
+              <input type="text" placeholder="الاسم الاخير" name="Last-name" id="last-name">
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="Inputs-with-Icons">
+            <input type="text" placeholder="اسم المستخدم" name="Username" id="username">
+            <label for="username"><img src="../photos/user-regular-24.png" alt=""></label>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="Inputs-with-Icons">
+            <input type="tel" placeholder="رقم الهاتف" name="Phone-number" id="phone-number">
+            <label for="phone-number"><img src="../photos/phone-regular-24.png" alt=""></label>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="Inputs-with-Icons">
+            <input type="emai" placeholder="البريد الإلكتروني" name="Email" id="email">
+            <label for="email"><img src="../photos/envelope-regular-24.png" alt=""></label>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="Inputs-with-Icons">
+            <input type="password" placeholder="كلمة السر" name="password" id="password">
+            <label for="password"><img src="../photos/lock-alt-regular-24.png" alt=""></label>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="Inputs-with-Icons">
+            <input type="password" placeholder="تاكيد كلمة السر" name="password" id="confirm-password">
+            <label for="confirm-password"><img src="../photos/lock-alt-regular-24.png" alt=""></label>
+          </div>
+        </div>
+        <div class="input-group">
+          <button type="submit">انشئ حسابك</button>
+        </div>
+      </form>
+    </div>
+    <div class="last-line">
+      <h2 style="direction: ltr;">
+        <span style="color: aliceblue;">يوجد لديك حساب بالفعل ؟</span>
+        <a href="LOGIN.html">ادخل الى حسابك الآن</a>
+      </h2>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-links">
+      <a href="../other_pages/about.html" class="footer-link">عن المنصة</a>
+      <a href="../courses-home.html" class="footer-link">الكورسات</a>
+      <a href="../other_pages/contact.html" class="footer-link">تواصل معنا</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="#" class="social-icon"><img src="../photos/facebook.png"></a>
+      <a href="#" class="social-icon"><img src="../photos/twitter.png"></a>
+      <a href="#" class="social-icon"><img src="../photos/youtube.png"></a>
+      <a href="#" class="social-icon"><img src="../photos/instagram.png"></a>
+    </div>
+
+    <p>أكاديمية التعلّم الإلكتروني.</p>
+  </footer>
+</body>
+
+</html>

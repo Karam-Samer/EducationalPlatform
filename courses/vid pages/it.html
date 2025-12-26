@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفيديوهات التعليمية</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #0B132B;
+            color: #E0E1DD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #1C2541;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #5BC0BE;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-item {
+            background-color: #3A506B;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-placeholder {
+            position: relative;
+            background-color: #4A6572;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .play-icon {
+            position: absolute;
+            font-size: 2em;
+            color: #E0E1DD;
+            cursor: pointer;
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #E0E1DD;
+            padding: 5px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+
+        .video-title {
+            padding: 10px;
+            text-align: center;
+            color: #E0E1DD;
+        }
+
+        .video-item:hover {
+            background-color: #4A6572;
+        }
+
+
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes linkFade {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(194, 231, 217, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(194, 231, 217, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(194, 231, 217, 0);
+            }
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #0F084B 0%, #26408B 100%);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.8s ease-out;
+            border-bottom: 1px solid rgba(166, 207, 213, 0.2);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #C2E7D9;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #A6CFD5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0D0221;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(15deg);
+            background-color: #C2E7D9;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: #A6CFD5;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 5px 0;
+            position: relative;
+            animation: linkFade 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .nav-links li:nth-child(1) a {
+            animation-delay: 0.3s;
+        }
+
+        .nav-links li:nth-child(2) a {
+            animation-delay: 0.4s;
+        }
+
+        .nav-links li:nth-child(3) a {
+            animation-delay: 0.5s;
+        }
+
+        .nav-links li:nth-child(4) a {
+            animation-delay: 0.6s;
+        }
+
+        .nav-links li:nth-child(5) a {
+            animation-delay: 0.7s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: #C2E7D9;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #C2E7D9;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+
+        .nav-links a.active {
+            color: #C2E7D9;
+            font-weight: bold;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+            background-color: #A6CFD5;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .login-btn,
+        .signup-btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .login-btn {
+            background-color: transparent;
+            color: #C2E7D9;
+            border: 2px solid #A6CFD5;
+        }
+
+        .login-btn:hover {
+            background-color: rgba(166, 207, 213, 0.1);
+        }
+
+        .signup-btn {
+            background-color: #C2E7D9;
+            color: #0D0221;
+            border: none;
+            animation: pulse 2s infinite;
+        }
+
+        .signup-btn:hover {
+            background-color: #A6CFD5;
+            transform: translateY(-2px);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(15, 8, 75, 0.95);
+            padding: 10px 0;
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../../index.html" class="logo">
+                <div class="logo-icon">A</div>
+                <span>أكاديمية التعلّم</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../../index.html">الرئيسية</a></li>
+                <li><a href="../../courses-home.html" class="active">الكورسات</a></li>
+                <li><a href="../../other_pages/about.html">عن المنصة</a></li>
+                <li><a href="../../other_pages/contact.html">تواصل معنا</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="window.location.href='../../auth/LOGIN.html'">تسجيل الدخول</button>
+                <button class="signup-btn" onclick="window.location.href='../../auth/SIGNUP.html'">حساب جديد</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>الفيديوهات التعليمية</h1>
+            <h2>فيديوهات امن المعلومات</h2>
+        </header>
+        <main class="videos-grid">
+            <div class="video-item">
+                <a href="https://www.youtube.com/watch?v=TDFwyQ11L9Q&list=PLgBxGHh_6esGArmM6ExRePgiX4zMgk-ZV&index=4">
+                    <div class="video-placeholder">
+                        <img src="img/it3.jpg" alt="صورة مصغرة للفيديو">
+                </a>
+                <div class="video-duration">0:30</div>
+            </div>
+            <div class="video-title">الدرس الاول</div>
+    </div>
+    <div class="video-item">
+        <a href="https://www.youtube.com/watch?v=W-xMZhYXhwY&list=PLgBxGHh_6esGArmM6ExRePgiX4zMgk-ZV&index=3">
+            <div class="video-placeholder">
+                <img src="img/it2.jpg" alt="صورة مصغرة للفيديو">
+        </a>
+        <div class="video-duration">0:50</div>
+    </div>
+    <div class="video-title">الدرس الثاني</div>
+    </div>
+    <div class="video-item">
+        <a href="https://www.youtube.com/watch?v=psRrwdtES9M&list=PLgBxGHh_6esGArmM6ExRePgiX4zMgk-ZV&index=2">
+            <div class="video-placeholder">
+                <img src="img/it1.jpg" alt="صورة مصغرة للفيديو">
+        </a>
+        <div class="video-duration">0:10</div>
+    </div>
+    <div class="video-title">الدرس الثالث</div>
+    </div>
+    </main>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكورسات التعليمية</title>
+    <link rel="stylesheet" href="css/style-courses-home.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">A</div>
+                <span>أكاديمية التعلّم</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="courses-home.html" class="active">الكورسات</a></li>
+                <li><a href="other_pages/about.html">عن المنصة</a></li>
+                <li><a href="other_pages/contact.html">تواصل معنا</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="window.location.href='auth/LOGIN.html'">تسجيل الدخول</button>
+                <button class="signup-btn" onclick="window.location.href='auth/SIGNUP.html'">حساب جديد</button>
+            </div>
+        </div>
+    </nav>
+    <h1 style="padding-top: 100px;">الكورسات التعليمية</h1>
+    <center>
+        <div id="quote" class="signup-btn">...</div>
+        <br>
+        <button class="login-btn" onclick="showRandomQuote()">اطلب نصيحة !</button>
+    </center>
+
+    <div class="courses-container">
+        <div class="course-card" onclick="window.location.href='courses/course1.html'">
+            <div class="course-image">
+                <img class="image" src="photos/web.jpg">
+            </div>
+            <h3 class="course-title">كورس تطوير الويب</h3>
+            <p class="course-description">تعلم أساسيات تطوير الويب باستخدام HTML, CSS, JavaScript من الصفر حتى الاحتراف.
+            </p>
+            <a href="courses/course1.html" class="view-course">عرض الكورس</a>
+        </div>
+
+        <div class="course-card" onclick="window.location.href='courses/course2.html'">
+            <div class="course-image">
+                <img class="image" src="photos/UI-UX.jpg">
+            </div>
+            <h3 class="course-title">كورس تصميم UI/UX</h3>
+            <p class="course-description">تعلم أساسيات تصميم تجربة المستخدم (UX) وواجهات المستخدم (UI) من الصفر.</p>
+            <a href="courses/course2.html" class="view-course">عرض الكورس</a>
+        </div>
+
+        <div class="course-card" onclick="window.location.href='courses/course3.html'">
+            <div class="course-image">
+                <img class="image" src="photos/python.jpg">
+            </div>
+            <h3 class="course-title">كورس برمجة بايثون</h3>
+            <p class="course-description">ابدأ رحلتك في البرمجة مع لغة بايثون القوية والسهلة للتعلم.</p>
+            <a href="courses/course3.html" class="view-course">عرض الكورس</a>
+        </div>
+
+        <div class="course-card" onclick="window.location.href='courses/course4.html'">
+            <div class="course-image">
+                <img class="image" src="photos/iot.jpg">
+            </div>
+            <h3 class="course-title">كورس أمن المعلومات</h3>
+            <p class="course-description">تعلم أساسيات أمن المعلومات وكيفية حماية أنظمتك وبياناتك من الاختراقات.</p>
+            <a href="courses/course4.html" class="view-course">عرض الكورس</a>
+        </div>
+
+        <div class="course-card" onclick="window.location.href='courses/course5.html'">
+            <div class="course-image">
+                <img class="image" src="photos/ml.jpg">
+            </div>
+            <h3 class="course-title">كورس تعلم الآلة</h3>
+            <p class="course-description">مدخل إلى تعلم الآلة والذكاء الاصطناعي باستخدام لغة بايثون.</p>
+            <a href="courses/course5.html" class="view-course">عرض الكورس</a>
+        </div>
+        <div class="course-card" onclick="window.location.href='courses/course6.html'">
+            <div class="course-image">
+                <img class="image" src="photos/en.jpg">
+            </div>
+            <h3 class="course-title">تعلم الإنجليزية للمبتدئين</h3>
+            <p class="course-description">طور مهاراتك اللغوية مع تدريبات عملية</p>
+            <a href="courses/course6.html" class="view-course">عرض الكورس</a>
+        </div>
+        <div class="course-card" onclick="window.location.href='courses/course7.html'">
+            <div class="course-image">
+                <img class="image" src="photos/c.png">
+            </div>
+            <h3 class="course-title">مقدمة في البرمجة</h3>
+            <p class="course-description">تعلم أساسيات البرمجة باستخدام C</p>
+            <a href="courses/course7.html" class="view-course">عرض الكورس</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="other_pages/about.html" class="footer-link">عن المنصة</a>
+            <a href="#" class="footer-link">الكورسات</a>
+            <a href="other_pages/contact.html" class="footer-link">تواصل معنا</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="photos/facebook.png"></a>
+            <a href="#" class="social-icon"><img src="photos/twitter.png"></a>
+            <a href="#" class="social-icon"><img src="photos/youtube.png"></a>
+            <a href="#" class="social-icon"><img src="photos/instagram.png"></a>
+        </div>
+
+        <p>أكاديمية التعلّم الإلكتروني.</p>
+    </footer>
+    <script>
+        const quotes = [
+            "التعلم كنز يتبع صاحبه أينما ذهب.",
+            "كل يوم تتعلم فيه شيء جديد هو يوم ناجح.",
+            "لا تستهن بخطوة صغيرة نحو هدف كبير.",
+            "ابدأ من حيث أنت، واستخدم ما تملك، وافعل ما تستطيع.",
+            "النجاح هو نتيجة للإصرار والمحاولة المستمرة.",
+            "الفشل الحقيقي هو أن تتوقف عن المحاولة."
+        ];
+
+        function showRandomQuote() {
+            const index = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").textContent = quotes[index];
+        }
+
+        showRandomQuote();
+
+    </script>
+</body>
+
+</html>

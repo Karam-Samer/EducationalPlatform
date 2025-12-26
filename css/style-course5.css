@@ -1,0 +1,348 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#0D0221;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.course-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease-in;
+}
+
+.course-big-img {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    background-color: #A6CFD5;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0D0221;
+    font-weight: bold;
+}
+
+.course-content {
+    background: linear-gradient(135deg,#0D0221, #26408B);
+    padding: 2rem;
+    border-radius: 15px;
+    animation: slideInUp 1s ease-in;
+    background: linear-gradient(to left, #1d3557, #457b9d);
+    color: white;
+}
+
+.course-content h2 {
+    color: #C2E7D9;
+    border-bottom: 2px solid #A6CFD5;
+    padding-bottom: 0.5rem;
+}
+
+.back-btn {
+    display: inline-block;
+    background-color:#26408B;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: all 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #A6CFD5;
+    color: #0D0221;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.image{
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    background-color: #A6CFD5;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #A6CFD5;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+    position: relative;
+    padding-right: 20px;
+    padding-top: 100px;
+}
+
+.back-button:hover {
+    color: #a6cfd590;
+    padding-right: 25px;
+}
+
+
+.back-button::before {
+    position: absolute;
+    right: 0;
+    transition: all 0.3s;
+}
+.navbar {
+    background: linear-gradient(135deg, #0F084B 0%, #26408B 100%);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.8s ease-out;
+    border-bottom: 1px solid rgba(166, 207, 213, 0.2);
+    left: 0;
+
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #C2E7D9;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #A6CFD5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0D0221;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg);
+    background-color: #C2E7D9;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #A6CFD5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 5px 0;
+    position: relative;
+    animation: linkFade 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.nav-links li:nth-child(1) a { animation-delay: 0.3s; }
+.nav-links li:nth-child(2) a { animation-delay: 0.4s; }
+.nav-links li:nth-child(3) a { animation-delay: 0.5s; }
+.nav-links li:nth-child(4) a { animation-delay: 0.6s; }
+.nav-links li:nth-child(5) a { animation-delay: 0.7s; }
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #C2E7D9;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #C2E7D9;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.nav-links a.active {
+    color: #C2E7D9;
+    font-weight: bold;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+    background-color: #A6CFD5;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #C2E7D9;
+    border: 2px solid #A6CFD5;
+}
+
+.login-btn:hover {
+    background-color: rgba(166, 207, 213, 0.1);
+}
+
+.signup-btn {
+    background-color: #C2E7D9;
+    color: #0D0221;
+    border: none;
+    animation: pulse 2s infinite;
+}
+
+.signup-btn:hover {
+    background-color: #A6CFD5;
+    transform: translateY(-2px);
+}
+
+.navbar.scrolled {
+    background-color: rgba(15, 8, 75, 0.95);
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes linkFade {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(194, 231, 217, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(194, 231, 217, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(194, 231, 217, 0);
+    }
+}
+
+footer {
+    background-color: #0F084B;
+    padding: 30px 20px;
+    text-align: center;
+    color: #A6CFD5;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    color: #C2E7D9;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-link:hover {
+    color: #A6CFD5;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(166, 207, 213, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: rgba(166, 207, 213, 0.3);
+    transform: translateY(-3px);
+}

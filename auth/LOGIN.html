@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>LOG IN page</title>
+  <link rel="stylesheet" href="../css/login&register.css">
+  <script type="text/javascript" src="../js/loginjava.js" defer></script>
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">A</div>
+        <span>أكاديمية التعلّم</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">الرئيسية</a></li>
+        <li><a href="../courses-home.html">الكورسات</a></li>
+        <li><a href="../other_pages/about.html">عن المنصة</a></li>
+        <li><a href="../other_pages/contact.html">تواصل معنا</a></li>
+      </ul>
+
+      <div class="auth-buttons">
+        <button class="login-btn" onclick="window.location.href='LOGIN.html'">تسجيل الدخول</button>
+        <button class="signup-btn" onclick="window.location.href='SIGNUP.html'">حساب جديد</button>
+      </div>
+    </div>
+  </nav>
+  <div style="padding-top: 200px;">
+    <h1>تسجيل الدخول</h1>
+    <div class="error-box">
+      <p id="errormessages"></p>
+    </div>
+    <div class="log-in">
+      <form action="" id="my-form">
+        <div class="input-group">
+          <div class="Inputs-with-Icons">
+            <input type="text" placeholder="اسم المستخدم" name="Username" id="username">
+            <img src="../photos/user-regular-24.png" alt="">
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="Inputs-with-Icons">
+            <input type="password" placeholder="كلمة السر" name="password" id="password">
+            <img src="../photos/lock-alt-regular-24.png" alt="">
+          </div>
+        </div>
+        <div class="input-group">
+          <button type="submit">تسجيل الدخول</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="last-line">
+      <h2 style="direction: ltr;">
+        <a href="SIGNUP.html">إنشاء حساب</a>
+        <span style="color: aliceblue;">لا يوجد لديك حساب ؟</span>
+      </h2>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-links">
+      <a href="../other_pages/about.html" class="footer-link">عن المنصة</a>
+      <a href="../courses-home.html" class="footer-link">الكورسات</a>
+      <a href="../other_pages/contact.html" class="footer-link">تواصل معنا</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="#" class="social-icon"><img src="../photos/facebook.png"></a>
+      <a href="#" class="social-icon"><img src="../photos/twitter.png"></a>
+      <a href="#" class="social-icon"><img src="../photos/youtube.png"></a>
+      <a href="#" class="social-icon"><img src="../photos/instagram.png"></a>
+    </div>
+
+    <p>أكاديمية التعلّم الإلكتروني.</p>
+  </footer>
+</body>
+
+</html>

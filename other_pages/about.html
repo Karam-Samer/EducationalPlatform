@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هدفنا - المنصة التعليمية</title>
+    <link rel="stylesheet" href="../css/about.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">A</div>
+                <span>أكاديمية التعلّم</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../courses-home.html">الكورسات</a></li>
+                <li><a href="about.html" class="active">عن المنصة</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="window.location.href='../auth/LOGIN.html'">تسجيل الدخول</button>
+                <button class="signup-btn" onclick="window.location.href='../auth/SIGNUP.html'">حساب جديد</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="header">
+            <h1>هدف المنصة التعليمية</h1>
+            <p>نسعى لتمكين الأفراد من خلال تقديم تعليم إلكتروني عالي الجودة، يساعدهم على تطوير مهاراتهم وبناء مستقبلهم
+                المهني</p>
+        </header>
+
+        <section class="mission-section">
+            <h2>رسالتنا</h2>
+            <p>نحن نؤمن بأن التعليم يجب أن يكون متاحًا للجميع، في أي وقت ومن أي مكان. لذلك نقدم منصتنا التعليمية كحل
+                مبتكر يجمع بين الجودة العالية والمرونة الكاملة، لتمكين المتعلمين من اكتساب المهارات التي يحتاجونها في
+                عالم يتغير بسرعة.</p>
+        </section>
+
+        <div class="goals-grid">
+            <div class="goal-card">
+                <div class="goal-icon">🎯</div>
+                <h3>التعليم للجميع</h3>
+                <p>إزالة الحواجز الجغرافية والمالية أمام التعليم الجيد، وتوفير فرص تعليمية عالية الجودة بأسعار معقولة
+                    للجميع.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-icon">🚀</div>
+                <h3>مواكبة المستقبل</h3>
+                <p>تقديم محتوى تعليمي حديث يركز على المهارات المطلوبة في سوق العمل الحالي والمستقبلي.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-icon">💡</div>
+                <h3>التعلم التفاعلي</h3>
+                <p>تحويل عملية التعلم من التلقين إلى تجربة تفاعلية ممتعة وفعالة تعتمد على الممارسة والتطبيق.</p>
+            </div>
+        </div>
+
+        <section class="values-section">
+            <h2>قيمنا الأساسية</h2>
+            <ul class="values-list">
+                <li class="value-item">
+                    <span class="value-text">الجودة والتميز في تقديم المحتوى التعليمي</span>
+                </li>
+                <li class="value-item">
+                    <span class="value-text">الابتكار والتطوير المستمر</span>
+                </li>
+                <li class="value-item">
+                    <span class="value-text">الشفافية والمصداقية</span>
+                </li>
+                <li class="value-item">
+                    <span class="value-text">التركيز على احتياجات المتعلم</span>
+                </li>
+                <li class="value-item">
+                    <span class="value-text">التعليم الموجه نحو التطبيق العملي</span>
+                </li>
+                <li class="value-item">
+                    <span class="value-text">بناء مجتمع تعليمي تفاعلي</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../other_pages/about.html" class="footer-link">عن المنصة</a>
+            <a href="../courses-home.html" class="footer-link">الكورسات</a>
+            <a href="../other_pages/contact.html" class="footer-link">تواصل معنا</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="../photos/facebook.png"></a>
+            <a href="#" class="social-icon"><img src="../photos/twitter.png"></a>
+            <a href="#" class="social-icon"><img src="../photos/youtube.png"></a>
+            <a href="#" class="social-icon"><img src="../photos/instagram.png"></a>
+        </div>
+
+        <p>أكاديمية التعلّم الإلكتروني.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.mission-section, .goal-card, .values-section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>

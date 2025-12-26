@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية التعلّم الإلكتروني</title>
+    <link rel="stylesheet" href="css/style_home.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">A</div>
+                <span>أكاديمية التعلّم</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="courses-home.html">الكورسات</a></li>
+                <li><a href="other_pages/about.html">عن المنصة</a></li>
+                <li><a href="other_pages/contact.html">تواصل معنا</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="window.location.href='auth/LOGIN.html'">تسجيل الدخول</button>
+                <button class="signup-btn" onclick="window.location.href='auth/SIGNUP.html'">حساب جديد</button>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>أكاديمية التعلّم الإلكتروني</h1>
+            <div id="ys-typewriter-container"></div>
+            <p class="hero-text">نقدم لك أفضل الكورسات التعليمية في مختلف المجالات التقنية، صممت خصيصًا لمساعدتك على
+                تطوير مهاراتك وبناء مستقبلك المهني.</p>
+            <a href="#courses" class="cta-button">استكشف الكورسات</a>
+        </div>
+    </section>
+
+    <section id="courses" class="courses-section">
+        <h2 class="section-title">الكورسات الرائجة</h2>
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-image"> <img alt="photo" src="photos/web.jpg" style="width: 100%;"> </div>
+                <div class="course-content">
+                    <h3 class="course-title">تطوير الويب الشامل</h3>
+                    <p class="course-description">تعلم HTML, CSS, JavaScript لبناء مواقع ويب تفاعلية واحترافية من الصفر.
+                    </p>
+                    <div class="course-meta">
+                        <span>🕒 8 أسابيع</span>
+                        <span>⭐ 4.9 (120 تقييم)</span>
+                    </div>
+                    <a href="courses/course1.html" class="view-course">ابدأ التعلم</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image"><img src="photos/UI-UX.jpg" style="width: 100%;"></div>
+                <div class="course-content">
+                    <h3 class="course-title">تصميم تجربة المستخدم</h3>
+                    <p class="course-description">أساسيات تصميم واجهات المستخدم وتجربة المستخدم باستخدام Figma وAdobe
+                        XD.</p>
+                    <div class="course-meta">
+                        <span>🕒 6 أسابيع</span>
+                        <span>⭐ 4.8 (95 تقييم)</span>
+                    </div>
+                    <a href="courses/course2.html" class="view-course">ابدأ التعلم</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image"><img src="photos/python.jpg" style="width: 100%;"></div>
+                <div class="course-content">
+                    <h3 class="course-title">برمجة بايثون للمبتدئين</h3>
+                    <p class="course-description">تعلم أساسيات البرمجة باستخدام لغة بايثون القوية والسهلة للتعلم.</p>
+                    <div class="course-meta">
+                        <span>🕒 5 أسابيع</span>
+                        <span>⭐ 4.7 (85 تقييم)</span>
+                    </div>
+                    <a href="courses/course3.html" class="view-course">ابدأ التعلم</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image"><img src="photos/iot.jpg" style="width: 100%;"></div>
+                <div class="course-content">
+                    <h3 class="course-title">أساسيات أمن المعلومات</h3>
+                    <p class="course-description">تعلم كيفية حماية الأنظمة والشبكات من الاختراقات والهجمات الإلكترونية.
+                    </p>
+                    <div class="course-meta">
+                        <span>🕒 7 أسابيع</span>
+                        <span>⭐ 4.9 (110 تقييم)</span>
+                    </div>
+                    <a href="courses/course4.html" class="view-course">ابدأ التعلم</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image"><img src="photos/ml.jpg" style="width: 100%;"></div>
+                <div class="course-content">
+                    <h3 class="course-title">مقدمة في تعلم الآلة</h3>
+                    <p class="course-description">مدخل إلى عالم الذكاء الاصطناعي وتعلم الآلة باستخدام لغة بايثون.</p>
+                    <div class="course-meta">
+                        <span>🕒 10 أسابيع</span>
+                        <span>⭐ 4.8 (75 تقييم)</span>
+                    </div>
+                    <a href="courses/course5.html" class="view-course">ابدأ التعلم</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="other_pages/about.html" class="footer-link">عن المنصة</a>
+            <a href="courses-home.html" class="footer-link">الكورسات</a>
+            <a href="other_pages/contact.html" class="footer-link">تواصل معنا</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="photos/facebook.png"></a>
+            <a href="#" class="social-icon"><img src="photos/twitter.png"></a>
+            <a href="#" class="social-icon"><img src="photos/youtube.png"></a>
+            <a href="#" class="social-icon"><img src="photos/instagram.png"></a>
+        </div>
+
+        <p>أكاديمية التعلّم الإلكتروني.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.course-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        (function ysTypewriterEffectInit() {
+            const ysContainer = document.getElementById("ys-typewriter-container");
+            const ysTexts = [
+                "نفتح أبواب المعرفة للجميع...",
+                "رحلتك نحو المستقبل تبدأ من هنا...",
+                "نصنع قادة الغد، اليوم...",
+                "نتعلم لنُحدث فرقاً حقيقياً..."
+            ];
+            let ysIndex = 0;
+            let ysCharIndex = 0;
+            let ysDeleting = false;
+
+            function ysTypeNextChar() {
+                const currentText = ysTexts[ysIndex];
+                const visible = ysDeleting
+                    ? currentText.substring(0, --ysCharIndex)
+                    : currentText.substring(0, ++ysCharIndex);
+
+                ysContainer.textContent = visible;
+
+                if (!ysDeleting && ysCharIndex === currentText.length) {
+                    ysDeleting = true;
+                    setTimeout(ysTypeNextChar, 1200);
+                    return;
+                } else if (ysDeleting && ysCharIndex === 0) {
+                    ysDeleting = false;
+                    ysIndex = (ysIndex + 1) % ysTexts.length;
+                }
+
+                setTimeout(ysTypeNextChar, ysDeleting ? 40 : 90);
+            }
+
+            ysTypeNextChar();
+        })();
+    </script>
+</body>
+
+</html>
