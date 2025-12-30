@@ -40,11 +40,11 @@ My role focused on front-end development, specifically designing and implementin
 ## 🚀 How to Run Locally
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/repository-name.git
+   git clone https://github.com/Karam-Samer/EducationalPlatform.git
    ```
 2. **Navigate to the project folder:**
    ```bash
-   cd final
+   cd EducationalPlatform
    ```
 3. **Open the project:**
    - Simply open `index.html` in your preferred web browser to explore the platform.
@@ -69,4 +69,4 @@ final/
 ---
 
 ## ⚠️ Disclaimer
-This project was created for **educational purposes only**. All visible courses, branding ("Academy of Learning"), and content materials were provided by instructors or created for the scope of this university coursework. No commercial use is intended.
+This project was created for **educational purposes only**. All visible courses, branding ("Academy of Learning"), and content materials were provided by instructors or created for the scope of the project.
