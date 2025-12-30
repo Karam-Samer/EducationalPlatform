@@ -1,16 +1,12 @@
 # EducationalPlatform
 
-## Running the Project Locally
+This is a Front-End only university project. The project showcases a responsive web interface built using HTML, CSS, and JavaScript. It includes multiple sections such as About, Skills, Projects, and Contact, along with Login and Signup pages.
 
-To run the project locally, follow these steps:
+### Important clarifications:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Karam-Samer/EducationalPlatform.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd EducationalPlatform
-   ```
+- This project is **UI-only** (no backend, no database, no real authentication).
+- Login and Signup pages are visual demonstrations only.
+- All content is created for academic and portfolio purposes.
+- No real user data or backend logic is involved.
 
-These instructions assume you have Git installed on your system.
+The goal is to demonstrate front-end structure, responsiveness, and clean UI design.
